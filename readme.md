@@ -8,4 +8,6 @@ License : MIT
 
 supported os : Windows Vista+
 
+[API Document](/docs/docs.md)
+
 Todo : .net support.
