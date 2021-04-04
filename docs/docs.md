@@ -41,25 +41,25 @@ Create and initialize WinConfirmDialog instance.
 	* bCanSkip: Enable 'skip' button in dialog.
 	* dialogType: Set Dialog Operation type. value must in 'WINCONFIRMDIALOGOPERATIONTYPE' enum
 
-## void SetSkipOption(BOOL bCanSkip); 
+### void SetSkipOption(BOOL bCanSkip); 
  Enable 'skip' button in dialog.
 	* bCanSkip: If 'TRUE' dialog show skip button, else dialog does not show skip button.
 
-## void SetApplyAllOption(BOOL bCanApplyAll);
+### void SetApplyAllOption(BOOL bCanApplyAll);
 Enable 'Apply to all' checkbox in dialog.
 	* bCanSkip: If 'TRUE' dialog show apply all checkbox, else dialog does not show checkbox.
 
-## void ShowDialog(HWND hwnd, WinConfirmDialogItem* item, DWORD dwRemainCnt);
+### void ShowDialog(HWND hwnd, WinConfirmDialogItem* item, DWORD dwRemainCnt);
 Show Conflict Dialog.
 	* hwnd: A handle to the window that owns the dialog box.
 	* item: Conflict item's info.
 	* dwRemainCnt: Remain items count.
-## void ShowDialogAdv(HWND hwnd, ISyncMgrConflictItems* item,DWORD dwRemainCnt);
+### void ShowDialogAdv(HWND hwnd, ISyncMgrConflictItems* item,DWORD dwRemainCnt);
 Show Conflict Dialog. for custom ISyncMgrConflictItems implements
 	* hwnd: A handle to the window that owns the dialog box.
 	* item: ISyncMgrConflictItems interface.
 	* dwRemainCnt: Remain items count.
-## WINCONFIRMDIALOGRESULT GetResult();
+### WINCONFIRMDIALOGRESULT GetResult();
 Get Conflict Dialog Results. 
 
 ## ** WinConfirmDialogItem class
