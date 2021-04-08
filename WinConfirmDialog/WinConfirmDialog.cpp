@@ -277,7 +277,7 @@ WinConfirmDialog::WinConfirmDialog(BOOL bCanApplyAll, BOOL bCanSkip, WINCONFIRMD
 	this->_dwResults = WINCONFIRMDIALOGRESULT::NONE;
 	this->_dwOperationType = dialogType;
 
-	this->_dwConfirmDialogFlags = 36;
+	this->_dwConfirmDialogFlags = 4;
 	SetSkipOption(bCanSkip);
 	SetApplyAllOption(bCanApplyAll);
 }
@@ -391,6 +391,15 @@ void WinConfirmDialog::SetApplyAllOption(BOOL bCanApplyAll) {
 	}
 	else {
 		this->_dwConfirmDialogFlags &= ~1;
+	}
+}
+
+void WinConfirmDialog::SetAllowRenameToAltName(BOOL bUseAllowRename) {
+	if (bUseAllowRename) {
+		this->_dwConfirmDialogFlags |= 32;
+	}
+	else {
+		this->_dwConfirmDialogFlags &= ~32;
 	}
 }
 

@@ -123,6 +123,12 @@ public:
 	void SetApplyAllOption(BOOL bCanApplyAll);
 
 	/**
+	* SetAllowRenameToAltName: Enable 'Move(Copy),But keep both files' options in dialog. (using item's alternative name)
+	* @param bCanApplyAll: If 'TRUE' dialog show keep both files options, else dialog does not show keep both files options.
+	*/
+	void SetAllowRenameToAltName(BOOL bUAllowRename);
+
+	/**
 	* ShowDialog: Show Conflict Dialog.
 	* @param hwnd: A handle to the window that owns the dialog box.
 	* @param item: Conflict item's info.

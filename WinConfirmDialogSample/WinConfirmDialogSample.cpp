@@ -34,6 +34,8 @@ int main()
 		printf("Error to initialize WinConfirmDialog\n");
 		return -1;
 	}
+	//enable 'keep both files' options. (use item alternative name)
+	confirmDialog->SetAllowRenameToAltName(TRUE);
 
 	WinConfirmDialogItem* item = WinConfirmDialogItem::CreateInstance();
 

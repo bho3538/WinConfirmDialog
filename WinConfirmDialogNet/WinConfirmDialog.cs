@@ -42,6 +42,22 @@ namespace WinConfirmDialogNet
         }
 
         /**
+        * SetAllowRenameToAltName: Enable 'Move(Copy),But keep both files' options in dialog. (using item's alternative name)
+        * @param bCanApplyAll: If 'TRUE' dialog show keep both files options, else dialog does not show keep both files options.
+        */
+        public void SetAllowRenameToAltName(bool bCanUseAltName)
+        {
+            if (bCanUseAltName)
+            {
+                this._dwConfirmDialogFlags |= 32;
+            }
+            else
+            {
+                this._dwConfirmDialogFlags &= ~32;
+            }
+        }
+
+        /**
         * ShowDialog: Show Conflict Dialog.
         * @param hwnd: A handle to the window that owns the dialog box.
         * @param item: Conflict item's info.
@@ -163,7 +179,7 @@ namespace WinConfirmDialogNet
             this._dwResults = WINCONFIRMDIALOGRESULT.NONE;
             this._dwOperationType = (int)dialogType;
 
-            this._dwConfirmDialogFlags = 36;
+            this._dwConfirmDialogFlags = 4;
             SetSkipOption(bCanSkip);
             SetApplyAllOption(bCanApplyAll);
         }

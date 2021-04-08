@@ -25,6 +25,8 @@ namespace WinConfirmDialogNetSample
                 Console.WriteLine("Error to initialize WinConfirmDialog");
                 return;
             }
+            //enable 'keep both files' options. (use item alternative name)
+            confirmDialog.SetAllowRenameToAltName(true);
 
             WinConfirmDialogItem item = new WinConfirmDialogItem();
 
